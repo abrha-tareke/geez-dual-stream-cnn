@@ -1,0 +1,35 @@
+# ============================================================
+# DEFAULT HYPERPARAMETER CONFIGURATION
+# ============================================================
+
+# Model Architecture
+input_shape: [64, 64, 1]
+num_classes: 276
+
+conv1_filters: 32
+conv2_filters: 64
+conv3_filters: 128
+conv4_filters: 256
+stream_filters: 512
+fc1_units: 1024
+fc2_units: 512
+
+dropout_rate: 0.5
+l2_reg: 0.0001
+kernel_size: 3
+pool_size: 2
+
+# Training
+learning_rate: 0.001
+batch_size: 32
+epochs: 100
+early_stopping_patience: 10
+
+# EWC
+ewc_lambda: 5000
+
+# Pruning
+pruning_rate: 0.45
+
+# Random Seed
+seed: 42
