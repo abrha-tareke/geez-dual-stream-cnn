@@ -4,9 +4,9 @@
 Complete source code for the MSc thesis:  
 **"Model-Preserving Dual-Stream Deep Learning Framework for Recognition of Degraded Ge'ez Characters"**
 
-**Author:** Abrha Tareke Araya  
-**Supervisor:** Dr. Bahailu Getachew (PhD)  
-**Institution:** Mekelle University, Ethiopian Institute of Technology
+Author: Abrha Tareke Araya  
+Advisor: Dr. Bahailu Getachew (PhD)  
+Institution:  Mekelle University, Ethiopian Institute of Technology
 
 ---
 
@@ -27,13 +27,12 @@ Complete source code for the MSc thesis:
 ```bash
 git clone https://github.com/abrha-tareke/geez-dual-stream-cnn.git
 cd geez-dual-stream-cnn
-```
 
 ### Install Dependencies
 
-```bash
+bash
 pip install -r requirements.txt
-```
+
 
 ---
 
@@ -41,21 +40,16 @@ pip install -r requirements.txt
 
 ### Train with Your Own Data
 
-```bash
+bash
 python training/train.py --data_path /path/to/your/data
-```
 
 ### Evaluate a Trained Model
 
-```bash
-python evaluation/evaluate.py --model weights/best_model.h5
-```
-
----
+bash
+python evaluation/evaluate.py --model weights/best_model.h
 
 ## Repository Structure
-
-```
+---
 geez-dual-stream-cnn/
 ├── README.md                 # This file
 ├── requirements.txt           # Python dependencies
@@ -72,31 +66,40 @@ geez-dual-stream-cnn/
 │   └── visualize.py          # Grad-CAM and SHAP implementation
 └── configs/
     └── default.yaml          # Default hyperparameter configuration
-```
-
 ---
 
 ## Dataset Access
 
-⚠️ **IMPORTANT:** The full Ge'ez character dataset used in this research is **not publicly available** due to institutional and cultural heritage restrictions.
+⚠️ IMPORTANT: The Ge'ez character dataset used in this research is **NOT PUBLICLY AVAILABLE** and **CANNOT BE SHARED OR DISTRIBUTED**.
 
-**Dataset Information:**
+**Reasons:**
+- Institutional access agreements prohibit redistribution
+- Cultural heritage protection of historical manuscripts
+- Privacy and sensitivity of religious content
+
+Dataset Information:
 - 15,000 annotated character images
 - 276 Ge'ez character classes
 - Collected from Ethiopian Manuscript Microfilm Library (EMML), Institute of Ethiopian Studies (IES), Tigray Monasteries, and Axum Heritage Sites
 
-**How to Request Access:**
-- Contact: Ethiopian Institute of Technology, Mekelle, School of Computing
-- Email: [institutional-email]
-- Subject: "Ge'ez Character Dataset Access Request"
+🔒 No dataset access requests will be entertained
 
----
+### Synthetic Data for Testing
+
+To enable testing of the model architecture and pipeline, the repository includes:
+
+- data/sample_data.py` — A synthetic data generator that creates test images
+- The generated images are NOT real Ge'ez characters
+- Use this to verify the model works before training with real data
+
+**Example:**
+```bash
+python training/train.py --sample_data
 
 ## Model Architecture
 
 ### Total Parameters: **4,665,948**
-
-```
+---
 Input: 64×64×1 (Grayscale)
     ↓
 Shared Convolutional Base
@@ -148,20 +151,16 @@ This project is licensed under the **MIT License**.
 
 If you use this code, please cite:
 
-```bibtex
+bibtex
 @mastersthesis{araya2026geez,
   author = {Abrha Tareke Araya},
   title = {Model-Preserving Dual-Stream Deep Learning Framework for Recognition of Degraded Ge'ez Characters},
   school = {Mekelle University},
   year = {2026}
 }
-```
-
----
 
 ## Contact
 
-- **Author:** Abrha Tareke Araya
-- **Email:** abrha.tareke@gmail.com
-- **GitHub:** https://github.com/abrha-tareke
-- **Institution:** Ethiopian Institute of Technology, Mekelle
+- Author:Abrha Tareke Araya
+- Email:abrha.tareke@gmail.com
+- GitHub:https://github.com/abrha-tareke
